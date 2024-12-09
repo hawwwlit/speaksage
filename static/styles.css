@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #4a90e2;
+    --background-color: #f5f7fa;
+    --text-color: #2c3e50;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;  
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+textarea {
+    width: calc(100% - 2rem);  /* Take up full width minus some spacing */
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    min-height: 100px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.options-section {
+    margin: 1.5rem 0;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.additional-requests {
+    min-height: 60px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.output-section {
+    margin-top: 2rem;
+}
+
+#outputText {
+    background-color: #f8f9fa;
+}
+
+/* For smaller screens, adjust padding responsively */
+@media (max-width: 800px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+        width: auto;
+        max-width: none;  /* Allow container to fill available width */
+    }
+    
+    textarea {
+        width: 100%;
+        box-sizing: border-box;  /* Ensure padding is included in width calculation */
+    }
+}
