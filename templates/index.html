@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak Sage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Speak Sage</h1>
+        <div class="input-section">
+            <textarea 
+                id="userInput" 
+                placeholder="Enter your text here..."
+            ></textarea>
+        </div>
+        
+        <div class="options-section">
+            <label class="checkbox-container">
+                <input type="checkbox" id="translateCheck">
+                <span class="checkmark"></span>
+                Translate to English
+            </label>
+            <label class="checkbox-container">
+                <input type="checkbox" id="grammarCheck" checked>
+                <span class="checkmark"></span>
+                Improve Grammar
+            </label>
+            
+            <label class="checkbox-container">
+                <input type="checkbox" id="flowCheck" checked>
+                <span class="checkmark"></span>
+                Improve Flow
+            </label>
+            
+            <textarea 
+                id="additionalRequests" 
+                placeholder="Additional requests (optional)..."
+                class="additional-requests"
+            ></textarea>
+        </div>
+
+        <button id="enhanceBtn">Enhance Text</button>
+
+        <div class="output-section">
+            <textarea 
+                id="outputText" 
+                readonly 
+                placeholder="Enhanced text will appear here..."
+            ></textarea>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
