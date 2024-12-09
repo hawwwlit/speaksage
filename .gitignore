@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .env
+ecosystem.config.js
 venv/
 .DS_Store
 logs/
