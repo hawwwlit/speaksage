@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  width: 300px;
+}
+
+.container h1 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.options-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+}
