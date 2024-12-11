@@ -1,26 +1,76 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 10px;
-  width: 300px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  padding: 16px;
+  width: 380px;
+  background: #f8f9fa;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .container h1 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  font-size: 1.5em;
+  margin: 0 0 16px 0;
+  color: #1a73e8;
+  font-weight: 500;
 }
 
 textarea {
   width: 100%;
-  margin-bottom: 10px;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
   resize: vertical;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+.options-section {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .options-section label {
-  display: block;
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #5f6368;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  accent-color: #1a73e8;
 }
 
 button {
   width: 100%;
   padding: 10px;
 }
+
+#additionalRequests {
+    min-height: 60px;
+    height: 60px;
+  }
+  
+  /* Keep other textareas (input/output) at original height */
+  #userInput, #outputText {
+    min-height: 100px;
+  }
