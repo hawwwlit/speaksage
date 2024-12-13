@@ -2,7 +2,6 @@
 document.getElementById('saveBtn').addEventListener('click', () => {
   const apiKey = document.getElementById('apiKeyInput').value.trim();
   chrome.storage.sync.set({ 'OPENAI_API_KEY': apiKey }, () => {
-    alert('API Key saved.');
     window.close();
   });
 });

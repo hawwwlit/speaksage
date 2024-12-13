@@ -1,15 +1,24 @@
 {
-  "manifest_version": 3,
-  "name": "Speak Sage",
-  "description": "Enhance text by translating and improving grammar and flow.",
-  "version": "1.0",
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
-  },
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": false
-  },
-  "permissions": ["storage"]
-}
+    "manifest_version": 3,
+    "name": "Speak Sage",
+    "description": "Enhance text by improving grammar and flow.",
+    "version": "1.0",
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": false
+    },
+    "permissions": ["storage"]
+  }
